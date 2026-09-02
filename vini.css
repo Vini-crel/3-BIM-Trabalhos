@@ -19,7 +19,7 @@ input, button {
   border: none;
   border-radius: 6px;
   font-size: 1rem;
-  box-sizing: border-box; /* garante que largura inclua padding */
+  box-sizing: border-box;
 }
 
 input {
