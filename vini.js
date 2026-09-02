@@ -41,7 +41,6 @@ function excluir(id) {
   renderizar();
 }
 
-// Limpa todos os monstros (com confirmação)
 function limparTudo() {
   if (personagens.length === 0) return;
   if (confirm('Tem certeza que deseja apagar TODOS os monstros?')) {
@@ -51,7 +50,6 @@ function limparTudo() {
   }
 }
 
-// ---------- RENDERIZAÇÃO ATUALIZADA ----------
 
 function renderizar() {
   lista.innerHTML = '';
@@ -60,12 +58,12 @@ function renderizar() {
     const div = document.createElement('div');
     div.className = 'card';
 
-    // Informações do monstro
+   
     const info = document.createElement('span');
     info.className = 'info';
     info.innerHTML = `<strong>${p.nome}</strong> (${p.tipo}) — Perigo: ${p.perigo}/5`;
 
-    // Botão excluir
+    
     const btnExcluir = document.createElement('button');
     btnExcluir.textContent = '🗑️ Excluir';
     btnExcluir.onclick = () => excluir(p.id);
