@@ -19,6 +19,7 @@ input, button {
   border: none;
   border-radius: 6px;
   font-size: 1rem;
+  box-sizing: border-box; /* garante que largura inclua padding */
 }
 
 input {
@@ -31,6 +32,7 @@ button {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
@@ -42,10 +44,54 @@ hr {
   margin: 20px 0;
 }
 
-#listaPersonagens div {
+
+#listaPersonagens .card {
   background: #2a2a2a;
-  padding: 10px;
+  padding: 10px 15px;
   margin: 6px 0;
   border-left: 4px solid #cc0000;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#listaPersonagens .card .info {
+  flex: 1;
+}
+
+#listaPersonagens .card button {
+  width: auto;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  background: #991111;
+  margin: 0;
+  border-radius: 4px;
+}
+
+#listaPersonagens .card button:hover {
+  background: #cc2222;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.acoes button {
+  flex: 1;
+}
+
+.btn-limpar {
+  background: #555;
+}
+
+.btn-limpar:hover {
+  background: #888;
+}
+
+#contador {
+  font-weight: bold;
+  color: #ff8888;
 }
