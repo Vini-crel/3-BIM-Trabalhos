@@ -35,9 +35,6 @@ function carregar() {
   if (dados) personagens = JSON.parse(dados);
 }
 
-// ---------- NOVAS FUNÇÕES ----------
-
-// Exclui um monstro pelo ID
 function excluir(id) {
   personagens = personagens.filter(p => p.id !== id);
   salvar();
